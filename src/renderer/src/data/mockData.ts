@@ -1,0 +1,110 @@
+import { Student, Instructor, Lesson } from '../types';
+
+export const mockStudents: Student[] = [
+  {
+    id: 'student-1',
+    name: 'John Doe',
+    address: '123 Village Road',
+    phone: '555-1234',
+    email: 'john.doe@example.com',
+    progress: 85,
+    paymentStatus: 'Paid',
+    lessonHistory: [],
+    nextTest: {
+      type: 'Theory',
+      date: '2025-05-20',
+    },
+  },
+  {
+    id: 'student-2',
+    name: 'Sarah Lee',
+    address: '456 High Street',
+    phone: '555-5678',
+    email: 'sarah.lee@example.com',
+    progress: 45,
+    paymentStatus: 'Partial',
+    lessonHistory: [],
+  },
+  {
+    id: 'student-3',
+    name: 'Michael Johnson',
+    address: '789 Park Avenue',
+    phone: '555-9012',
+    email: 'michael.j@example.com',
+    progress: 15,
+    paymentStatus: 'Unpaid',
+    lessonHistory: [],
+  },
+];
+
+export const mockInstructors: Instructor[] = [
+  {
+    id: 'instructor-1',
+    name: 'Jane Smith',
+    phone: '555-9876',
+    email: 'jane.smith@example.com',
+    availableHours: [
+      { day: 'Monday', startTime: '09:00', endTime: '16:00' },
+      { day: 'Tuesday', startTime: '09:00', endTime: '16:00' },
+      { day: 'Wednesday', startTime: '09:00', endTime: '16:00' },
+      { day: 'Thursday', startTime: '09:00', endTime: '16:00' },
+      { day: 'Friday', startTime: '09:00', endTime: '16:00' },
+    ],
+    students: [],
+    completedLessons: 20,
+  },
+  {
+    id: 'instructor-2',
+    name: 'Robert Wilson',
+    phone: '555-3456',
+    email: 'robert.w@example.com',
+    availableHours: [
+      { day: 'Monday', startTime: '10:00', endTime: '18:00' },
+      { day: 'Tuesday', startTime: '10:00', endTime: '18:00' },
+      { day: 'Thursday', startTime: '10:00', endTime: '18:00' },
+      { day: 'Friday', startTime: '10:00', endTime: '18:00' },
+      { day: 'Saturday', startTime: '09:00', endTime: '14:00' },
+    ],
+    students: [],
+    completedLessons: 15,
+  },
+];
+
+export const mockLessons: Lesson[] = [
+  {
+    id: 'lesson-1',
+    type: 'Introductory',
+    duration: 2,
+    fee: 50,
+    instructorId: 'instructor-1',
+    studentId: 'student-1',
+    date: '2025-05-10',
+    time: '14:00',
+    status: 'Confirmed',
+    paymentStatus: 'Unpaid',
+  },
+  {
+    id: 'lesson-2',
+    type: 'Standard',
+    duration: 1,
+    fee: 30,
+    instructorId: 'instructor-1',
+    studentId: 'student-2',
+    date: '2025-05-11',
+    time: '10:00',
+    status: 'Confirmed',
+    paymentStatus: 'Paid',
+  },
+  {
+    id: 'lesson-3',
+    type: 'Introductory',
+    duration: 2,
+    fee: 50,
+    instructorId: 'instructor-2',
+    studentId: 'student-3',
+    date: '2025-05-12',
+    time: '16:00',
+    status: 'Confirmed',
+    paymentStatus: 'Unpaid',
+  },
+];
